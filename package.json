@@ -21,6 +21,7 @@
     "react-native-device-info": "^0.13.0",
     "react-native-dimension": "^1.0.6",
     "react-native-i18n": "^2.0.12",
+    "react-native-storage": "^0.2.2",
     "react-native-svg": "^6.1.4",
     "react-native-svg-image": "^2.0.1",
     "react-native-swiper": "^1.5.13",

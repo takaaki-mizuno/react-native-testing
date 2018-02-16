@@ -7,20 +7,14 @@ import {
     TouchableOpacity,
     TextInput,
     ScrollView,
-    Image
+    Button,
+    Image,
+    Alert
 } from 'react-native';
 
 import iconSkip from "../../../resources/assets/images/test/iconSkip.png"
 import logo_alt4 from "../../../resources/assets/images/test/logo_alt4.png"
-import {connect} from "react-redux";
 
-const mapStateToProps = state => ({});
-import {bindActionCreators} from "redux";
-const mapDispatchToProps = dispatch =>
-    bindActionCreators(
-        {},
-        dispatch
-    );
 
 class Signup extends Component {
 
@@ -29,7 +23,7 @@ class Signup extends Component {
             <ScrollView style={{
                 flex: 1, alignSelf: 'stretch',
                 paddingTop: 20,
-                backgroundColor: '#FFFFFF'}}>
+                backgroundColor: '#8EA1AF'}}>
                 <View style={styles.A01a}>
                     <View style={styles.mHead}>
                         <Image source={iconSkip} style={styles.iconSkip} />
@@ -45,9 +39,14 @@ class Signup extends Component {
                                 <Text style={styles.placeholder}>パスワード</Text>
                         </View>
                     </View>
-                    <View style={styles.buttonSave}>
+                    <Button style={styles.buttonSave}
+                            title="Press Me"
+                            onPress={() => {
+                                Alert.alert('You tapped the button!');
+                            }}
+                    >
                         <View style={styles.bg} />
-                    </View>
+                    </Button>
                     <Text style={styles._19}>パスワードをお忘れですか？</Text>
                     <View style={styles.button}>
                         <View style={styles.frame}>
@@ -67,7 +66,8 @@ class Signup extends Component {
 
 const styles = StyleSheet.create({
     A01a: {
-        width: 335
+        flex: 1,
+        justifyContent: 'center',
     },
     mHead: {
         alignSelf: 'flex-end',
@@ -187,6 +187,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export const SignupScreen = connect(mapStateToProps, mapDispatchToProps)(
-    Signup
-);
+export const SignupScreen = Signup;

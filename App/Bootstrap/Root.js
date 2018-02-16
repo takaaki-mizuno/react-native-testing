@@ -11,6 +11,8 @@ import { HomeScreen } from "../Screens/Home/Screen";
 import { SigninScreen } from "../Screens/Signin/Screen";
 import { SignupScreen } from "../Screens/Signup/Screen";
 
+import TestScreen from "../Screens/Test";
+
 export const Root = StackNavigator(
     {
         Splash: {
@@ -37,6 +39,13 @@ export const Root = StackNavigator(
                 header: null,
             },
         },
+        Test: {
+            screen: TestScreen,
+            navigationOptions: {
+                header: null,
+            },
+        },
+
     },
     {
         headerMode: "screen",
@@ -44,6 +53,6 @@ export const Root = StackNavigator(
         cardStyle: {
             backgroundColor: 'transparent',
         },
-        initialRouteName: "Splash",
+        initialRouteName: "Signup",
     }
 );
